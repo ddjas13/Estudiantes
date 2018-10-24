@@ -1,0 +1,11 @@
+public class TestEstudiantes{
+
+  public static void main(String[] args) {
+
+    Estudiantes sc = new Estudiantes("David Josue","Agreda Siliezar","Masculino",10055888,23,33);
+
+    System.out.println("El nombre completo del alumno es "+sc.nombres+ " "+sc.apellidos);
+    System.out.println("Es de genero: "+sc.genero+ " y tiene "+sc.edad+ " años de edad");
+    System.out.println("Su numero de carne es: "+sc.carne+ " Y esta en el curso # "+sc.idCurso);
+  }
+}
