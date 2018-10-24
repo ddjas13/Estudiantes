@@ -1,0 +1,71 @@
+public class Estudiantes{
+
+	//Variables
+	public String nombres;
+	public String apellidos;
+	public String genero;
+	public int carne;
+	public int idCurso;
+	public int edad;
+
+
+	// constructor
+	public Estudiantes(String name, String lastName, String gender, int idEst, int idClass, int age){
+		nombres = name;
+		apellidos = lastName;
+		genero = gender;
+		carne = idEst;
+		idCurso = idClass;
+		edad = age;
+	}
+
+	//Metodos getter&setters
+	public void setNombres(String name){
+		nombres = name;
+	}
+
+	public String getNombres() {
+		return nombres;
+	}
+
+	public void setApellidos(String lastName){
+		apellidos = lastName;
+	}
+
+	public String getApellidos(){
+		return apellidos;
+	}
+
+	public void setGenero(String gender){
+		genero = gender;
+	}
+
+	public String getGenero() {
+		return genero;
+	}
+
+	public void setCarne(int idEst){
+		carne = idEst;
+	}
+
+	public int getCarne(){
+		return carne;
+	}
+
+	public void setIdCurso(int idClass){
+		idCurso = idClass;
+	}
+
+	public int getIdCurso(){
+		return idCurso;
+	}
+
+	public void setEdad(int age){
+		edad = age;
+	}
+
+	public int getEdad(){
+		return edad;
+	}
+
+}
