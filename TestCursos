@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class TestCursos{
+
+  public static void main(String[] args) {
+    Scanner tc = new Scanner(System.in);
+    Scanner tcint = new Scanner(System.in);
+
+    String ciclo;
+
+    do {
+      System.out.println("Por favor ingresa la materia que te deseas asignar");
+      String materia = tc.nextLine();
+      System.out.println("La jornada estudiantil sera por la mañana o tarde?");
+      String jornada = tc.nextLine();
+      System.out.println("Ingrese el nombre del docente que impartira la clase");
+      String docente = tc.nextLine();
+      System.out.println("En que edificio se impartiran los cursos?");
+      String edificio = tc.nextLine();
+
+      Cursos cs = new Cursos(materia, jornada, docente, edificio);
+
+      System.out.println("La materia que te asignaste es "+cs.materia+" y el maestro que la impartira se llama "+cs.docente);
+      System.out.println("Recueda presentarte por la "+cs.jornada+" en el edificio "+cs.edificio);
+      System.out.println("Desea registrar mas cursos? s/n");
+      ciclo = tc.nextLine();
+    } while (ciclo.equalsIgnoreCase("s"));
+  }
+}
