@@ -5,21 +5,13 @@ public class Cursos {
 	String jornada;
 	String docente;
 	String edificio;
-	int idCurso;
-	int idDocente;
-	int aula;
-	int capacidadAula;
 
   // constructor
-  public Cursos(String materia, String jornada, String docente, String edificio, int idCurso, int aula, int capacidadAula){
+  public Cursos(String materia, String jornada, String docente, String edificio){
     this.materia = materia;
     this.jornada = jornada;
     this.docente = docente;
     this.edificio = edificio;
-    this.idCurso = idCurso;
-    this.idDocente = idDocente;
-    this.aula = aula;
-    this.capacidadAula = capacidadAula;
   }
 
   //Metodos Getter & setters
@@ -55,37 +47,4 @@ public class Cursos {
   public String getEdificio(){
     return edificio;
   }
-
-  public void setIdCurso(int idCurso){
-    this.idCurso = idCurso;
-  }
-
-  public int getIdCurso(){
-    return idCurso;
-  }
-
-  public void setIdDocente(int idDocente){
-    this.idDocente = idDocente;
-  }
-
-  public int getIdDocente(){
-    return idDocente;
-  }
-
-  public void setAula(int aula){
-    this.aula = aula;
-  }
-
-  public int getAula(){
-    return aula;
-  }
-
-  public void setCapacidadAula(int capacidadAula){
-    this.capacidadAula = capacidadAula;
-  }
-
-  public int getCapacidadAula(){
-    return capacidadAula;
-  }
-
 }
