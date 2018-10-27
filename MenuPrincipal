@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class MenuPrincipal{
+
+  public static void main(String[] args) {
+    boolean menuP;
+    int opcionMenu;
+
+    MenuPrincipal elmenu = new MenuPrincipal();
+    Scanner mp = new Scanner(System.in);
+  //  TestEstudiantess ingresoEstudiantes = new TestEstudiantess();
+  //  ingresoEstudiantes.TEstudiantes();
+    //TestCursos tcs = new TestCursos();
+
+
+    do {
+
+      System.out.println("*** Bienvenido al Sistema del instituto ***");
+      System.out.println("seleccione que desea hacer hoy.");
+      System.out.println("1 - Registrar Curso");
+      System.out.println("2 - Inscribir Estudiantes");
+      System.out.println("3 - Ingresar Notas");
+      System.out.println("6 - Salir");
+      System.out.println("Recuerda ingresar el numero solamente.");
+      opcionMenu = mp.nextInt();
+
+      switch (opcionMenu){
+        case 1:
+          TestCursos tc = new TestCursos();
+          tc.TCursos();
+        break;
+
+        case 2:
+          TestEstudiantes prueba = new TestEstudiantes();
+          prueba.TEstudiantes();
+        break;
+      }
+    } while (opcionMenu != 6);
+  }
+}
