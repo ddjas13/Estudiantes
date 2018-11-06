@@ -1,0 +1,46 @@
+public class Notas{
+
+  String nMateria;
+  int carneEstudiante;
+  int zona;
+  int examen;
+
+  public Notas(String nMateria, int carneEstudiante, int zona, int examen){
+    this.nMateria = nMateria;
+    this.carneEstudiante = carneEstudiante;
+    this.zona = zona;
+    this.examen = examen;
+  }
+
+  public void setNMateria(String nMateria){
+    this.nMateria = nMateria;
+  }
+
+  public String getNMateria(){
+    return nMateria;
+  }
+
+  public void setCarneEstudiante(int carneEstudiante){
+    this.carneEstudiante = carneEstudiante;
+  }
+
+  public int getCarneEstudiante(){
+    return carneEstudiante;
+  }
+
+  public void setZona(int zona){
+    this.zona = zona;
+  }
+
+  public int getZona(){
+    return zona;
+  }
+
+  public void setExamen(int examen){
+    this.examen = examen;
+  }
+
+  public int getExamen(){
+    return examen;
+  }
+}
