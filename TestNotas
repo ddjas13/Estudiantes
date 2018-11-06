@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+  public class TestNotas{
+    public  void TNotas(){
+      int notafinal;
+      int zona = 0;
+      int examen = 0;
+      boolean mayorzona;
+      boolean mayorexamen;
+
+      Scanner nt = new Scanner(System.in);
+      Scanner nts = new Scanner(System.in);
+
+      System.out.println("Ingresa el nombre de la Materia que vas a agregar notas");
+      String nMateria = nt.nextLine();
+      System.out.println("Ingresa el numero de carne del alumno");
+      int carneEstudiante = nts.nextInt();
+
+      mayorzona = true;
+
+      while (mayorzona == true){
+        System.out.println("ingresar la zona final del alumno");
+        zona = nts.nextInt();
+        if(zona > 60){
+          System.out.println("El valor es invalido, la nota de la zona no puede ser mayor que 60 puntos");
+        } else if (zona <= 60) {
+          mayorzona = false;
+        }
+      }
+
+      mayorexamen = true;
+
+      while (mayorexamen == true){
+        System.out.println("Ingresar la nota final de examen");
+        examen = nts.nextInt();
+        if(examen > 40){
+          System.out.println("El valor es invalido, la nota del examen no puede ser mayor que 40 puntos");
+        } else if (examen <= 40) {
+          mayorexamen = false;
+        }
+      }
+
+      Notas no = new Notas(nMateria, carneEstudiante, zona, examen);
+    }
+
+    public static void main(String[] args) {
+      Scanner nts = new Scanner(System.in);
+      TestNotas notes = new TestNotas();
+      notes.TNotas();
+
+    }
+  }
