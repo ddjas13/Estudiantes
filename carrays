@@ -1,0 +1,106 @@
+import java.util.Scanner;
+
+public class Cursos{
+    
+    private String materia;
+	private String jornada;
+	private String docente;
+	private String edificio;
+	
+    public Cursos(){
+        materia = " ";
+        jornada = " ";
+        docente = " ";
+        edificio = " ";
+    }
+
+    // constructor
+    public Cursos(String m, String j, String d, String ed){
+        materia = m;
+        jornada = j;
+        docente = d;
+        edificio = ed;
+    }
+
+    //Metodos Getter & setters
+
+    public void setMateria(String materia){
+        this.materia = materia;
+    }
+
+    public String getMateria(){
+        return materia;
+    }
+
+    public void setJornada(String jornada){
+        this.jornada = jornada;
+    }
+
+    public String getJornada(){
+        return jornada;
+    }
+
+    public void setDocente(String docente){
+        this.docente = docente;
+    }
+
+    public String getDocente(){
+        return docente;
+    }
+
+    public void setEdificio(String edificio){
+        this.edificio = edificio;
+    }
+
+    public String getEdificio(){
+        return edificio;
+    }
+    
+    public void Courses(){
+        String materia = " ";
+        String jornada = " ";
+        String docente = " ";
+        String edificio = " ";
+        
+        Scanner tc = new Scanner(System.in);
+        
+        System.out.println("Cuantas clases resgitrara hoy?");
+        int cantCursos = tc.nextInt();
+        tc.nextLine();
+        
+        Cursos cur[] = new Cursos[cantCursos];
+        
+        
+        //String ciclo;
+
+        //do {
+        
+        for (int i = 0; i<cur.length; i++){
+            System.out.println("Por favor ingresa la materia que te deseas asignar");
+            materia = tc.nextLine();
+            System.out.println("La jornada estudiantil sera por la mañana o tarde?");
+            jornada = tc.nextLine();
+            System.out.println("Ingrese el nombre del docente que impartira la clase");
+            docente = tc.nextLine();
+            System.out.println("En que edificio se impartiran los cursos?");
+            edificio = tc.nextLine();
+           // tc.nextLine();
+            
+            cur[i] = new Cursos(materia, jornada, docente, edificio);
+            /*Cursos cs = new Cursos(materia, jornada, docente, edificio);
+
+            System.out.println("La materia que te asignaste es "+cs.materia+" y el maestro que la impartira se llama "+cs.docente);
+            System.out.println("Recueda presentarte por la "+cs.jornada+" en el edificio "+cs.edificio);
+            System.out.println("Desea registrar mas cursos? s/n");
+            ciclo = tc.nextLine();*/
+        } //while (ciclo.equalsIgnoreCase("s"));
+
+    }
+    public static void main(String[] args) {
+        Cursos cs = new Cursos();
+        
+        cs.Courses();
+        
+
+    } 
+}
