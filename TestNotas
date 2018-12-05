@@ -2,51 +2,60 @@ import java.util.Scanner;
 
   public class TestNotas{
     public  void TNotas(){
-      int notafinal;
-      int zona = 0;
-      int examen = 0;
+      // Inicializaion de las variales del metodo Notas
+	    materia = " ";
+	    carne = 0;
+	    zona = 0;
+	    examen = 0;
+      // variables locales
+      int notafinal =0;
       boolean mayorzona;
       boolean mayorexamen;
 
-      Scanner nt = new Scanner(System.in);
-      Scanner nts = new Scanner(System.in);
+	    Scanner nt = new Scanner(System.in);
 
-      System.out.println("Ingresa el nombre de la Materia que vas a agregar notas");
-      String nMateria = nt.nextLine();
-      System.out.println("Ingresa el numero de carne del alumno");
-      int carneEstudiante = nts.nextInt();
+	    System.out.println("Cuantos estudiantes quiere registrar");
+	    int cantNotas = nt.nextInt();//Informacion para llenar la canti
+	    nt.nextLine();
 
-      mayorzona = true;
+	    //arreglo
+	    Notas not[] =new Notas[cantNotas];
 
-      while (mayorzona == true){
-        System.out.println("ingresar la zona final del alumno");
-        zona = nts.nextInt();
-        if(zona > 60){
-          System.out.println("El valor es invalido, la nota de la zona no puede ser mayor que 60 puntos");
-        } else if (zona <= 60) {
-          mayorzona = false;
+      for (int i=0; i<not.length; i++){
+        System.out.println("Ingresa el nombre de la Materia que vas a agregar notas");
+        String nMateria = nt.nextLine();
+        System.out.println("Ingresa el numero de carne del alumno");
+        int carneEstudiante = nt.nextInt();
+
+      	mayorzona = true;//inicialiacion de la variable para ingresar al ciclo
+        //while y que la nota ingresada no sea mayor a 60pts
+
+        mayorexamen = true;//inicialiacion de la variable para ingresar al ciclo
+        //while y que la nota ingresada no sea mayor a 40pts
+
+      	while (mayorzona == true){
+          System.out.print
+        	while (mayorzona =ln("ingresar la zona final del alumno");
+        	zona = nt.nextInt();
+        	if(zona > 60){
+            System.out.println("El valor es invalido, la nota de la zona no puede ser mayor que 60 puntos");
+          } else if (zona <= 60) {
+            mayorzona = false;
+          }
+      	}
+
+      	while (mayorexamen == true){
+          System.out.println("Ingresar la nota final de examen");
+          examen = nt.nextInt();
+          if(examen > 40){
+            System.out.println("El valor es invalido, la nota del examen no puede ser mayor que 40 puntos");
+          } else if (examen <= 40) {
+            mayorexamen = false;
+          }
+          nt.nextLine();
         }
+
+          not[i] = new Notas(materia, carne, zona, examen);
       }
-
-      mayorexamen = true;
-
-      while (mayorexamen == true){
-        System.out.println("Ingresar la nota final de examen");
-        examen = nts.nextInt();
-        if(examen > 40){
-          System.out.println("El valor es invalido, la nota del examen no puede ser mayor que 40 puntos");
-        } else if (examen <= 40) {
-          mayorexamen = false;
-        }
-      }
-
-      Notas no = new Notas(nMateria, carneEstudiante, zona, examen);
-    }
-
-    public static void main(String[] args) {
-      Scanner nts = new Scanner(System.in);
-      TestNotas notes = new TestNotas();
-      notes.TNotas();
-
     }
   }
