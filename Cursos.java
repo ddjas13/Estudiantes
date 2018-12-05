@@ -1,50 +1,56 @@
-public class Cursos {
+public class Cursos{
 
-  //Variables publicas
-  String materia;
-	String jornada;
-	String docente;
-	String edificio;
+  private String materia;
+	private String jornada;
+	private String docente;
+	private String edificio;
 
-  // constructor
-  public Cursos(String materia, String jornada, String docente, String edificio){
-    this.materia = materia;
-    this.jornada = jornada;
-    this.docente = docente;
-    this.edificio = edificio;
-  }
+    public Cursos(){
+        materia = " ";
+        jornada = " ";
+        docente = " ";
+        edificio = " ";
+    }
 
-  //Metodos Getter & setters
+    // constructor
+    public Cursos(String materia, String jornada, String docente, String edificio){
+        materia = materia;
+        jornada = jornada;
+        docente = docente;
+        edificio = edificio;
+    }
 
-  public void setMateria(String materia){
-    this.materia = materia;
-  }
+    //Metodos Getter & setters
 
-  public String getMateria(){
-    return materia;
-  }
+    public void setMateria(String materia){
+        this.materia = materia;
+    }
 
-  public void setJornada(String jornada){
-    this.jornada = jornada;
-  }
+    public String getMateria(){
+        return this.materia;
+    }
 
-  public String getJornada(){
-    return jornada;
-  }
+    public void setJornada(String jornada){
+        this.jornada = jornada;
+    }
 
-  public void setDocente(String docente){
-    this.docente = docente;
-  }
+    public String getJornada(){
+        return this.jornada;
+    }
 
-  public String getDocente(){
-    return docente;
-  }
+    public void setDocente(String docente){
+        this.docente = docente;
+    }
 
-  public void setEdificio(String edificio){
-    this.edificio = edificio;
-  }
+    public String getDocente(){
+        return this.docente;
+    }
 
-  public String getEdificio(){
-    return edificio;
-  }
+    public void setEdificio(String edificio){
+        this.edificio = edificio;
+    }
+
+    public String getEdificio(){
+        return this.edificio;
+    }
 }
