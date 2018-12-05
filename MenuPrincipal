@@ -6,17 +6,18 @@ public class MenuPrincipal{
   public static void main(String[] args) {
     boolean menuP;
     int opcionMenu = 0 ;
-    
-    TestEstudiantes prueba = new TestEstudiantes();
-    TestNotas tn = new TestNotas();
-    TestCursos tc = new TestCursos();
+
     Scanner mp = new Scanner(System.in);
+
+    TestCursos tc = new TestCursos();
+    TestEstudiante tes = new TestEstudiante();
+    //TestNotas tn = new TestNotas();
 
 
     do {
 	try {
 
-      System.out.println(blue+"\n*** Bienvenido al Sistema del instituto ***");
+      System.out.println("\n*** Bienvenido al Sistema del instituto ***");
       System.out.println("\n seleccione que desea hacer hoy.");
       System.out.println("\n 1 - Registrar Curso");
       System.out.println("\n 2 - Inscribir Estudiantes");
@@ -32,15 +33,15 @@ public class MenuPrincipal{
 
       switch (opcionMenu){
         case 1:
-          tc.TCursos();
+          tc.Courses();
         break;
 
         case 2:
-          prueba.TEstudiantes();
+          tes.TEstudiantes();
         break;
 
         case 3:
-         // tn.TNotas();
+          //tn.TNotas();
         break;
 
         case 4:
@@ -48,13 +49,11 @@ public class MenuPrincipal{
         break;
 
         case 5:
-
+            //System.out.flush();
+          //TestEstudiantes prueba = new TestEstudiantes();
+          //prueba.TEstudiantes();
         break;
       }
     } while (opcionMenu != 6);
   }
 }
-
-
-
-Language Version:  JDK 10.0.1
